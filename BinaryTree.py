@@ -27,6 +27,17 @@ class Node:
         if self.right_child:
             self.right_child.print_tree()
 
+    def search(self, val):
+        if val == self.data:
+            return str(self.data) + ' is found in the BST'
+        elif val > self.data:
+            if self.right_child:
+                return self.right_child.search(val)
+            else:
+                return str(val) + ' is not part of the BST'
+        elif val < self.data:
+            
+
 
 # Creating a root node
 root = Node(27)
