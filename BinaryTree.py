@@ -15,7 +15,7 @@ class Node:
                 return
         else:
             if self.right_child:
-                self.left_child.insert(data)
+                self.right_child.insert(data)
             else:
                 self.right_child = Node(data)
                 return
@@ -25,7 +25,7 @@ class Node:
             self.left_child.print_tree()
         print(self.data),
         if self.right_child:
-            self.left_child.print_tree()
+            self.right_child.print_tree()
 
 
 # Creating a root node
