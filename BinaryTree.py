@@ -36,6 +36,10 @@ class Node:
             else:
                 return str(val) + ' is not part of the BST'
         elif val < self.data:
+            if self.left_child:
+                return self.left_child.search(val)
+            else:
+                return str(val) + ' is not part of the BST'
             
 
 
@@ -49,6 +53,6 @@ root.insert(15)
 root.insert(10)
 root.insert(30)
 
-print(root)
-
+print(root.search(30))
+print(root.search(31))
 root.print_tree()
