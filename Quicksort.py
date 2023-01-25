@@ -1,4 +1,4 @@
-arr = [2, 7, 5, 78, 9, 4]
+
 
 def quicksort(array, p, r):
     if p < r:
@@ -10,8 +10,8 @@ def partition(array, p, r):
     x = array[r]
     i = p - 1
 
-    for j in range(p, r - 1):
-        if array[r] <= x:
+    for j in range(p, r):
+        if array[j] <= x:
             i = i +1
             swap = array[i]
             array[i] = array[j]
@@ -21,4 +21,13 @@ def partition(array, p, r):
     array[r] = swap
     return i+1
 
-print(quicksort(arr, arr[1], arr[len(arr)-1]))
+data = [1, 7, 4, 1, 10, 9, -2]
+print("Unsorted Array")
+print(data)
+ 
+size = len(data)
+ 
+quicksort(data, 0, size - 1)
+ 
+print('Sorted Array in Ascending Order:')
+print(data)
