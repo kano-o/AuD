@@ -1,5 +1,3 @@
-
-
 def quicksort(array, p, r):
     if p < r:
         q = partition(array, p, r)
